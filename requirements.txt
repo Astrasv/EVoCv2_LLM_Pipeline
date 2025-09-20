@@ -1,45 +1,43 @@
-# requirements.txt
 # Core Framework
-fastapi==0.104.1
-uvicorn==0.24.0
-pydantic==2.5.0
-pydantic-settings==2.1.0
+fastapi>=0.104,<0.105
+uvicorn>=0.24,<0.25
+pydantic>=2.5,<2.6
+pydantic-settings>=2.1,<2.2
+pydantic[email]
 
 # Database
 sqlalchemy==2.0.23
-asyncpg==0.29.0
-alembic==1.13.1
-redis==5.0.1
+asyncpg>=0.29,<0.30
+alembic>=1.13,<1.14
+redis>=5.0,<6
+databases[postgresql]>=0.9,<0.10  # compatible with SQLAlchemy 2.0
 
 # LangChain Integration
-langchain==0.1.0
-langchain-postgres==0.0.4
-langchain-groq==0.1.3
+langchain>=0.1,<0.2
+langchain-postgres>=0.0.4,<0.1
+langchain-groq>=0.1,<0.2
 
 # LLM Provider (ChatGroq)
-groq==0.4.1
+groq>=0.4,<0.5
 
 # Evolutionary Algorithms
-deap==1.4.1
-numpy==1.24.3
-scipy==1.11.4
+deap>=1.4,<2
+numpy>=1.24,<1.25
+scipy>=1.11,<1.12
 
 # Code Execution & Security
-docker==6.1.3
-psutil==5.9.6
+docker>=6.1,<7
+psutil>=5.9,<6
 
 # Utilities
-python-multipart==0.0.6
-websockets==12.0
-aiofiles==23.2.1
-python-jose[cryptography]==3.3.0
-python-dotenv==1.0.0
-passlib[bcrypt]==1.7.4
-
-# Async database support
-databases[postgresql]==0.8.0
+python-multipart>=0.0.6,<0.1
+websockets>=12,<13
+aiofiles>=23.2,<24
+python-jose[cryptography]>=3.3,<4
+python-dotenv>=1.0,<2
+passlib[bcrypt]>=1.7,<2
 
 # Testing
-pytest==7.4.3
-pytest-asyncio==0.21.1
-httpx==0.25.2
+pytest>=7.4,<8
+pytest-asyncio>=0.21,<0.22
+httpx>=0.25,<0.26
