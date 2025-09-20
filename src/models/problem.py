@@ -13,7 +13,8 @@ class ProblemStatementBase(BaseModel):
 
 
 class ProblemStatementCreate(ProblemStatementBase):
-    user_id: UUID
+    # Removed user_id - it will be set from authentication
+    pass
 
 
 class ProblemStatementUpdate(BaseModel):
