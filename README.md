@@ -88,6 +88,8 @@ Instead of manually coding evolutionary algorithms, users describe their problem
 
 ## Architecture
 
+![Architecture Diagram](asset\images\arch.png)
+
 
 
 ---
