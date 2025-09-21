@@ -10,7 +10,8 @@ import uuid
 
 from src.config.database import init_database, close_database
 from src.config import settings
-from src.api import users, problems, notebooks, health, chat, evolution
+from src.api import users, problems, notebooks, health, chat, evolution, agents
+
 
 
 # Configure logging
@@ -131,6 +132,8 @@ app.include_router(problems.router, prefix="/api/v1", tags=["problems"])
 app.include_router(notebooks.router, prefix="/api/v1", tags=["notebooks"])
 app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
 app.include_router(evolution.router, prefix="/api/v1", tags=["evolution"])
+app.include_router(agents.router, prefix="/api/v1", tags=["agents"])
+
 
 
 

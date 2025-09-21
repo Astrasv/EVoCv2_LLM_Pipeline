@@ -278,7 +278,11 @@ ALTER TABLE notebooks ADD CONSTRAINT check_notebook_status
     CHECK (status IN ('draft', 'evolving', 'completed', 'archived'));
 
 ALTER TABLE notebook_cells ADD CONSTRAINT check_cell_type 
-    CHECK (cell_type IN ('fitness', 'selection', 'crossover', 'mutation', 'initialization', 'evaluation', 'custom'));
+    CHECK (cell_type IN (
+        'fitness', 'selection', 'crossover', 'mutation', 
+        'initialization', 'evaluation', 'custom',
+        'problem_analysis', 'individual_representation', 'toolbox_registration'
+    ));
 
 ALTER TABLE evolution_sessions ADD CONSTRAINT check_iterations 
     CHECK (current_iteration >= 0 AND max_iterations > 0 AND current_iteration <= max_iterations);
